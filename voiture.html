@@ -2,87 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <!--script>
-    var v1 = Object.create(voiture);
-    v1.couleur = "blue";
-    v1.type = "berline";
-
-    var v2 = Object.create(voiture);
-    v2.couleur = "yellow";
-    v2.type = "familiale";
-
-    var v3 = Object.create(voiture);
-
-    window.onload = function () {
-      /*afficherVoiture(v1);
-      afficherVoiture(v2);
-      afficherVoiture(v3);*/
-
-      //recupe données formulaire : 
-      var formulaire = document.getElementById('formulaire');
-
-      formulaire.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        var selectedCar = document.getElementById('car-select').value;
-        var selectedColor = document.getElementById('color-select').value;
-
-        //console.log("Voiture sélectionnée :", selectedCar);
-        //console.log("Couleur sélectionnée :", selectedColor);
-
-        ajouterVoiture(selectedCar, selectedColor);
-      });
-
-      function ajouterVoiture(type, couleur) {
-        console.log(type, couleur);
-      }
-
-      function afficherVoiture(o) {
-        var selected = "<img src='images/" + o.type + ".png' style='background-color:" + o.couleur + "'/>"
-
-        var voiture = document.getElementById("voiture");
-        var newDiv = document.createElement("img");
-        newDiv.src = 'images/' + o.type + '.png';
-        newDiv.style.backgroundColor = o.couleur;
-        voiture.appendChild(newDiv);
-
-
-        // TEST
-        var form = document.getElementById("formulaire")
-
-
-
-      };
-    };
-
-
-  </script!-->
-  <title>Voiture</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Voiture</title>
 </head>
 
 <body class="background-image">
-  <form id="formulaire">
-    <select name="cars" id="car-select">
-      <option value="">--Selectionne ta voiture--</option>
-      <option value="citadine">citadine</option>
-      <option value="berline">berline</option>
-      <option value="familiale">familiale</option>
-    </select>
-    <br>
-    <select name="color" id="color-select">
-      <option value="blue">Bleu</option>
-      <option value="yellow">Jaune</option>
-      <option value="red">Rouge</option>
-    </select>
-    <br />
-    <button>Ajouter</button>
-  </form>
-  <div id="voiture">
-  </div>
+    <section>
+        <form id="formulaire">
+            <select name="cars" id="car-select">
+                <option value="">--Selectionne ta voiture--</option>
+                <option value="citadine">citadine</option>
+                <option value="berline">berline</option>
+                <option value="familiale">familiale</option>
+            </select>
+            <br>
+            <select name="color" id="color-select">
+                <option value="blue">Bleu</option>
+                <option value="yellow">Jaune</option>
+                <option value="red">Rouge</option>
+            </select>
+            <br />
+            <select name="speed" id="speed">
+                <option value="" disabled>--Selectionne sa vitesse--</option>
+                <option value="100">100 km/h</option>
+                <option value="110">110 km/h</option>
+                <option value="120">120 km/h</option>
+            </select>
+            <br>
+            <button>Ajouter</button>
+        </form>
+
+        <div>
+            <button id="course">Go</button>
+        </div>
+    </section>
+    <section>
+        <div id="board">
+            <div id="voiture"></div>
+        </div>
+    </section>
 </body>
 
 </html>
