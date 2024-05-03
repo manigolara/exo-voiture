@@ -66,6 +66,7 @@ body {
 /* Tableau de bord */
 #board {
   margin-top: 20px;
+  top: 100px;
   /*background-image: url("images/piste.png");
   display: none;*/
 }

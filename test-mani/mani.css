@@ -1,0 +1,7 @@
+#board .cars {
+  display: inline-block;
+  position: relative;
+}
+#board .cars img {
+  position: absolute;
+}/*# sourceMappingURL=mani.css.map */
